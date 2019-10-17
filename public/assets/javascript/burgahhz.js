@@ -25,12 +25,12 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        name: $("#newBurger").val().trim(),
+        burgerName: $("#newBurger").val().trim(),
         slapped: $("[name=slapped]:checked").val().trim()
       };
   
       // Send the POST request.
-      $.ajax("/api/burger", {
+      $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
@@ -46,7 +46,7 @@ $(function() {
       var id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burgers" + id, {
         type: "DELETE"
       }).then(
         function() {
