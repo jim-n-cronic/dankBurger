@@ -15,11 +15,13 @@ var burger = {
     update: (objColVals,condition,cb) => {
         ORM.update("burgers", objColVals, condition, (res) => {
             cb(res);
+            //console.log(res);
         });
     },
     delete: (condition,cb) => {
-        ORM.delete("cats", condition, (res) => {
+        ORM.delete("burgers", condition, (res) => {
             cb(res);
+            //console.log(res);
         });
     }
 };

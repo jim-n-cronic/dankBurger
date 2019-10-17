@@ -18,3 +18,4 @@ app.use(routes);
 
 // LISTEN ON SERVER
 app.listen(PORT, () => console.log(`Connected to port: ${PORT}`));
+
